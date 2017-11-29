@@ -5,8 +5,8 @@ repository:
   private: false
 
   has_issues: true
-  has_projects: false
-  has_wiki: false
+  has_projects: true
+  has_wiki: true
 
   allow_merge_commit: false
   allow_rebase_merge: true
@@ -26,9 +26,3 @@ labels:
     color: d93f0b
   - name: question
     color: cc317c
-  - name: backlog
-    color: ededed
-  - name: in-progress
-    color: 0052cc
-  - name: in-review
-    color: 5319e7
