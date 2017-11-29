@@ -1,4 +1,6 @@
-# redis-cli-cluster
+redis-cli-cluster
+=================
+
 Cluster-aware re-implementation of `redis-cli`.
 
 Here's the problem:
