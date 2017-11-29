@@ -13,8 +13,8 @@ with open(os.path.join(PACKAGE_ROOT, 'requirements.txt')) as f:
 
 setuptools.setup(
     name='redis-cli-cluster',
-    version='0.5.0',
-    description='redis-cli for cluster mode',
+    version='0.6.0',
+    description='cluster-aware redis-cli',
     long_description=README,
     packages=setuptools.find_packages(exclude=('tests',)),
     install_requires=REQUIREMENTS,

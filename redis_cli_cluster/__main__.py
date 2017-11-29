@@ -1,7 +1,7 @@
 """redis-cli-cluster
 
 Usage:
-  redis-pi-cluster [options]
+  redis-pi-cluster [options] [<command>]...
 
 Options:
   -h <hostname>      Server hostname (default: 127.0.0.1).
@@ -15,7 +15,7 @@ import sys
 import docopt
 
 from . import __version__
-from .repl import repl
+from .cluster import StrictRedisCluster
 
 
 def main():
@@ -26,8 +26,13 @@ def main():
 
     args['-h'] = args['-h'] or '127.0.0.1'
     args['-p'] = args['-p'] or '6379'
+    client = StrictRedisCluster(host=args['-h'], port=args['-p'])
 
-    repl(args['-h'], args['-p'])
+    if args['<command>']:
+        client.run(args['<command>'])
+        return
+
+    client.repl()
 
 
 if __name__ == '__main__':
