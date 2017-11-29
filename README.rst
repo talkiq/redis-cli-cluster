@@ -13,7 +13,7 @@ Here's the problem:
     $ ctrl-D
     $ redis-cli -c -h node-0 keys "*"
     (empty list or set)
-    $ redis-cli -c -h node-0 keys "*"
+    $ redis-cli -c -h node-1 keys "*"
     1) "apple"
 
 Wouldn't it be great if that ``keys *`` worked the same was as in non-clustered
