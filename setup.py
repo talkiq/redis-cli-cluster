@@ -17,6 +17,7 @@ setuptools.setup(
     description='cluster-aware redis-cli',
     long_description=README,
     packages=setuptools.find_packages(exclude=('tests',)),
+    python_requires='>= 3.0.0',
     install_requires=REQUIREMENTS,
     author='Kevin James',
     author_email='KevinJames@thekev.in',
